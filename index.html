@@ -4,12 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <link rel="stylesheet" href="./css/styles.css">
     <title>MatcheADAs</title>
 </head>
 <body>
     
+    
+    <div class="container">
+        <h1>TROLLHUNTERS</h1>
+        <h2>MatcheAdas</h2>
 
+    <!-- PANEL DE INFORMACIÓN -->
+        <div class="panel">
+            <div class="score">
+                <p>
+                    <span>Combo x</span>
+                    <span>1</span>
+                </p>
+                <p>
+                    <span>Puntos:</span>
+                    <span>0</span>
+                </p>
+            </div>
+            <div class="buttons">
+                <button><span class="iconify" data-icon="bi:info-square" data-inline="false"></span></button>
+                <button><span class="iconify" data-icon="grommet-icons:power-reset" data-inline="false"></span></button>
+            </div>
+        </div>
+        
+
+    <!-- GRILLA -->
+        <div class="grid-container">
+            <div class="grid" id="grid">
+                
+            </div>
+        </div>
+
+    <!-- TIMER -->
+        <div class="timer">
+            <span class="iconify" data-icon="ic:sharp-timer" data-inline="false"></span>
+            <span id="root">00:30</span>
+        </div>
+    </div>
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,155 @@
+@import url('http://fonts.cdnfonts.com/css/trollhunters');
+                
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('https://images.hdqwalls.com/download/trollhunters-netflix-5k-po-3840x2400.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trollhunters', sans-serif;
+    color: rgb(35, 48, 170);
+    text-shadow: -1px 0 rgba(0, 0, 0, 0.808), 0 1px rgba(0, 0, 0, 0.541), 1px 0 rgba(0, 0, 0, 0.5), 0 -1px black;
+}
+
+
+.container{
+    width: 60%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2%;
+    background-color: rgba(32, 1, 27, 0.397);
+
+}
+
+.panel{
+    background-color: rgba(4, 194, 194, 0.5);
+    width: 60%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+
+}
+.score{
+    display: flex;
+}
+.grid-container{
+    width: 400px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.397);
+}
+
+.grid{
+    background-color: rgba(77, 79, 80, 0.397);
+    padding: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+div{
+    border-radius: 5px;
+    margin: 1%;
+    padding: 7px;
+}
+
+.iconify{
+    font-size: 16px;
+    color: rgb(35, 48, 170);
+}
+
+button{
+    padding: 2px;
+    background-color: transparent;
+    border: none;
+}
+button:hover{
+    background-color: rgba(225, 234, 238, 0.397);
+    border-radius: 50px;
+    cursor: pointer;
+}
+img{
+    margin: 0;
+    padding: 0;
+}
+.timer{
+    background-color: rgba(248, 244, 247, 0.397);
+
+}
+
+@media (max-width: 800px){
+    body{
+        background-image: url("https://wallpaperaccess.com/full/3136942.jpg");
+        background-size: cover;
+    }
+    .container{
+        width: 90%;
+    }
+    .panel{
+        background-color: rgba(4, 194, 194, 0.5);
+        width: 80%;
+    }
+    .score, .buttons{
+        width: 40%;
+    }
+    .buttons{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .grid-container{
+        width: 60%;
+        height: auto;
+    }
+    img{
+        width: 25px;
+    }
+    span{
+        font-size: small;
+    }
+}
+@media (max-width: 600px){
+    .grid-container{
+        width: 70%;
+        height: auto;
+    }
+    img{
+        width: 20px;
+    }
+    .panel{
+        width: 85%;
+    }
+    .score, .buttons{
+        width: 50%;
+    }
+}
+@media (max-width: 400px){
+    .grid-container{
+        width: 200px;
+        height: auto;
+    }
+    img{
+        width: 15px;
+    }
+    .panel{
+        width: 95%;
+    }
+    span{
+        font-size: 12px;
+    }
+}
