@@ -15,9 +15,8 @@ body{
     align-items: center;
     font-family: 'Trollhunters', sans-serif;
     color: rgb(35, 48, 170);
-    text-shadow: -1px 0 rgba(0, 0, 0, 0.808), 0 1px rgba(0, 0, 0, 0.541), 1px 0 rgba(0, 0, 0, 0.5), 0 -1px black;
+    text-shadow: -1px 0 rgba(0, 0, 0, 0.363), 0 1px rgba(0, 0, 0, 0.541), 1px 0 rgba(0, 0, 0, 0.205), 0 -1px rgba(0, 0, 0, 0.466);
 }
-
 
 .container{
     width: 60%;
@@ -44,8 +43,8 @@ body{
     display: flex;
 }
 .grid-container{
-    width: 400px;
-    height: auto;
+    width: 450px;
+    height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,8 +56,6 @@ body{
     padding: 1%;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    height: auto;
     justify-content: center;
     align-items: center;
 }
