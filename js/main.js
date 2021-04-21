@@ -33,43 +33,7 @@ const getGrid = () =>{
     }
     getElement();
 }
- /////////////////////
 
- let itemDragged;
-
- divs.forEach(newDiv => newDiv.addEventListener('dragstart', dragStart));
- divs.forEach(newDiv => newDiv.addEventListener('dragend', dragEnd));
- divs.forEach(newDiv => newDiv.addEventListener('dragover', dragOver));
- divs.forEach(newDiv => newDiv.addEventListener('dragenter', dragEnter));
- divs.forEach(newDiv => newDiv.addEventListener('dragleave', dragLeave));
- divs.forEach(newDiv => newDiv.addEventListener('dragdrop', dragDrop));
- 
- function dragStart (){
-     console.log(this.id, 'dragstart')
- }
- function dragEnd (){
-     console.log(this.id, 'dragend')
- 
- }
- function dragOver(){
-    e.preventDefault();
-     console.log(this.id, 'dragover')
- 
- }
- function dragEnter(e){
-     e.preventDefault(),
-     console.log(this.id, 'dragenter')
- 
- }
-function dragLeave(){
-     console.log(this.id, 'dragleave')
- 
- }
- function dragDrop(){
-     console.log(this.id, 'dragdrop')
-     replace = this
- 
- }
 
  /////////////////////
 
@@ -142,6 +106,41 @@ const welcome = () =>{
     });
 }
 welcome();
+
+// TIMER
+
+
+let count = 0;
+let sec = 30;
+let time = 0;
+let count2 = 0;
+
+const startTimer = () => {
+
+    const timer = () => {
+    count2++;
+    if (count2 <= 30) {
+        var root = document.getElementById('root');
+        root.innerHTML = `00:${sec}`;
+        count++
+        time = sec - count;
+        root.innerHTML = `00:${time}`;
+        
+    }else{
+        
+        myStopTimer();
+        gameOver();
+    }
+}
+var startTimer = setInterval(timer, 1000);
+
+const myStopTimer = () => {
+    clearInterval(startTimer);
+};
+
+}
+
+
 const gameOver = () =>{
     swal({
         title: "Juego terminado",
@@ -159,9 +158,11 @@ const gameOver = () =>{
         switch (value) {
             case "retry":
                 getGrid(size);
+                startTimer(count2 = 0, count = 0);
                 break;
             case "newGame":
                 level();
+                startTimer(count2 = 0, count = 0);
                 break;
                 default:
         }
@@ -202,40 +203,5 @@ reset.addEventListener('click', ()=>{
         }
     })
 })
-
-
-// TIMER
-
-
-let count = 0;
-let sec = 30;
-let time = 0;
-let count2 = 0;
-
-const startTimer = () => {
-
-    const timer = () => {
-    count2++;
-    if (count2 <= 30) {
-        var root = document.getElementById('root');
-        root.innerHTML = `00:${sec}`;
-        count++
-        time = sec - count;
-        root.innerHTML = `00:${time}`;
-        
-    }else{
-        
-        myStopTimer();
-        gameOver();
-    }
-}
-var startTimer = setInterval(timer, 1000);
-
-const myStopTimer = () => {
-    clearInterval(startTimer);
-};
-
-}
-
 
 
